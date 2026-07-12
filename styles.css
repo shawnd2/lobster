@@ -368,6 +368,9 @@ main {
   background:
     radial-gradient(circle at 34% 28%, #e9f4d1 0 2%, #688b42 3% 10%, #213318 38%, #050704 72%);
   box-shadow: 0 0 48px rgba(157,255,79,.18);
+  transform-origin: center;
+  will-change: transform;
+  animation: planet-spin 22s linear infinite;
 }
 
 .rocket {
@@ -805,6 +808,11 @@ main {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes planet-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes hover {
